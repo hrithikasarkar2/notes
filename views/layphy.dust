@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Physics</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+	body, html {
+  height: 100%;
+  margin: 0;
+}
+	body{
+		
+		background:url("./img/88.jpg") ;
+		width: 100;
+		 height: 100%; 
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-7">
+				{+body /}
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="/js/bootstrap.js"></script>
+</body>
+</html>

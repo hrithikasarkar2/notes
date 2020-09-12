@@ -1,0 +1,58 @@
+{>"laybio" /}
+
+{<body}
+  <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#formModal">
+    Add Notes
+  </button>
+  <br />
+
+  {#bio}  <!-- here -->
+    <div class="well">
+      <h4>{topic_name} 
+      <button class="btn btn-default pull-right" data-toggle="collapse" href="#bio_{id}" aria-expanded="false"   aria-controls="bio_{id}">  <!-- here -->
+      <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>View or Download Notes
+      </button></h4>
+
+    <div class="collapse" id="bio_{id}"> <!-- here -->
+        <br />
+        <br />
+        <p><strong>Link to Notes: </strong><a href={google_drive_link}> {google_drive_link} </a></p>
+        <p><strong>Contributed By: </strong>{your_name}</p>
+        <br />
+        <hr />
+      </div>
+      </div>
+  {/bio} <!-- here -->
+
+  <!-- Add Form Modal -->
+  <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form method="post" action="/add2"> <!-- here -->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Add Notes</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                  <label>Topic name</label>
+                  <input type="text" class="form-control" name="topic_name" id="topic_name" />
+                </div>
+                <div class="form-group">
+                  <label>Link To the Notes</label>
+                  <input type="url" class="form-control" name="google_drive_link" id="google_drive_link" />
+                </div>
+                <div class="form-group">
+                  <label>Contributed By:</label>
+                  <textarea class="form-control" name="your_name" id="your_name"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <input type="submit" class="btn btn-primary" value="Save" />
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{/body}
